@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #json{
+            display: grid;
+            text-align: center;
+            grid-column-gap: 50px; 
+            grid-template-columns: auto auto;
+            align-items: start;    
+        }
+        #grid-item {
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+        <div id="json"></div>
+    <script>
+        var data = [{"Nombre":"Jesamin",
+                    "Monto":"50",
+                    "Categoria":"comida",
+                    "Descripcion":"nada"},
+                    {"Nombre":"David",
+                    "Monto":"50",
+                    "Categoria":"comida",
+                    "Descripcion":"nada"},
+                    {"Nombre":"Ann",
+                    "Monto":"40",
+                    "Categoria":"netflix",
+                    "Descripcion":"nada"},
+                    {"Nombre":"Yessica",
+                    "Monto":"50",
+                    "Categoria":"comida",
+                    "Descripcion":"nada"}]   
+                     
+            var txt="";    
+            data.forEach(element=>{
+                //document.getElementById("json").innerHTML= sobj; 
+                txt+="<div id=grid-item> Nombre </div>"+ "<div id=grid-item>"+element.Nombre+"</div>"+
+                     "<div id=grid-item> Monto </div>"+ "<div id=grid-item>"+element.Monto+"</div>"+
+                     "<div id=grid-item> Categoria </div>"+ "<div id=grid-item>"+element.Categoria+"</div>"+  
+                     "<div id=grid-item> Descripcion </div>"+ "<div id=grid-item>"+element.Descripcion+"</div>";
+                     //document.getElementById("json").innerHTML= txt
+                    
+            })        
+            document.getElementById("json").innerHTML= txt
+            
+    </script>
+       
+
+</body>
+</html>
